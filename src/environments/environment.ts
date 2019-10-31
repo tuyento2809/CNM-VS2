@@ -3,8 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  server_port: 3000,
+  get API_URL() { return `http://${window.location.hostname}:${this.server_port}`; },
+ 
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file
